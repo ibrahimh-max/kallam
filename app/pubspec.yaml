@@ -1,0 +1,38 @@
+name: saudi_english_tutor
+description: "Saudi English Tutor — Saudi Arabic explanations for adult English beginners."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  audioplayers: ^6.7.1
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  flutter_secure_storage: ^11.2.0
+  http: ^1.6.0
+  path_provider: ^2.1.6
+  record: ^6.2.1
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  # Flutter web (CanvasKit) cannot use the operating system's fonts: it renders
+  # only fonts registered with the engine. On Android/iOS the platform Arabic
+  # font is present, so Arabic always looked correct there. On web the bundled
+  # Roboto is Latin-only, so every Arabic glyph came out as a missing-glyph box.
+  # Bundling the font the theme already names fixes web with no behaviour change
+  # on Android/iOS (neither declares a fontFamily, so both keep the OS font).
+  fonts:
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic.ttf
