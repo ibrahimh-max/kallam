@@ -1,0 +1,21 @@
+{
+  "name": "saudi-english-tutor-validation",
+  "private": true,
+  "type": "module",
+  "description": "Milestone 0 HUMAIN Voice validation harness. Not shipped in the mobile app.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "step1": "node tools/validation/src/connectivity.ts",
+    "step2": "node tools/validation/src/capabilities.ts",
+    "step3": "node tools/validation/src/voices.ts",
+    "step4": "node tools/validation/src/measure.ts",
+    "step5": "node tools/validation/src/report.ts",
+    "check": "node tools/checks/milestone-0-zero-credit.mjs",
+    "guard": "node tools/checks/initialization-guard.mjs"
+  },
+  "dependencies": {
+    "socket.io-client": "4.8.4"
+  }
+}
