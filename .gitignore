@@ -1,0 +1,46 @@
+# --- Secrets: never commit ---
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.keystore
+*.jks
+service-account*.json
+
+# --- Node / backend ---
+node_modules/
+server/dist/
+npm-debug.log*
+*.tsbuildinfo
+
+# --- Flutter / Dart ---
+.dart_tool/
+.packages
+build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/local.properties
+app/android/key.properties
+app/ios/Pods/
+app/ios/.symlinks/
+app/ios/Flutter/Flutter.framework
+app/ios/Flutter/Flutter.podspec
+*.g.dart.bak
+
+# --- Tooling/agent state (not project source) ---
+.code-in/
+.code-ae/
+
+# --- Local validation output (may contain audio/transcripts) ---
+tools/validation/out/
+*.wav
+*.mp3
+*.m4a
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
